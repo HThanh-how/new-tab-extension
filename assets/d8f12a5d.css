@@ -1,0 +1,46 @@
+.etab-msg-modal_bg[data-v-6fc76b5d] {
+  height: 458px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background 0.2s;
+  padding-top: 60px;
+}
+.etab-msg-modal_day[data-v-6fc76b5d] {
+  margin: 0 10%;
+  font-size: 66px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.etab-msg-modal_text[data-v-6fc76b5d] {
+  margin: 20px 20%;
+  font-size: 18px;
+  color: #ffffffe6;
+}
+.etab-msg-modal_footer-bg[data-v-6fc76b5d] {
+  width: 100%;
+}
+.etab-msg-modal_footer[data-v-6fc76b5d] {
+  display: flex;
+  justify-content: center;
+  width: 347px;
+  margin: 146px auto 0;
+  background: rgba(5, 8, 9, 0.5);
+  border-radius: 6px;
+  opacity: 0.8;
+}
+.etab-msg-modal_icon[data-v-6fc76b5d] {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin: 0 30px;
+  font-size: 30px;
+  line-height: 52px;
+  cursor: pointer;
+}
+.etab-msg-modal_icon[data-v-6fc76b5d]:hover {
+  font-size: 32px;
+}
