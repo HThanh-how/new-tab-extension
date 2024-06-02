@@ -6086,7 +6086,7 @@ function zh(e = {}) {
 }
 const Wo = {
     error: (e) => {
-      ie.error(e || "\u51FA\u9519\u5566", { theme: "dark" });
+      ie.error(e || "Make A Mistake", { theme: "dark" });
     },
     success: (e) => {
       ie.clearAll(), ie.success(e, { theme: "dark" });
@@ -6192,8 +6192,8 @@ const Kh = () => Gr.get(sr.Token) || "",
     e.data && e.data.msg
       ? e.data.msg
       : e.status && e.status !== 200
-      ? "\u670D\u52A1\u5F02\u5E38\u5566,\u8BF7\u91CD\u65B0\u5C1D\u8BD5!"
-      : "\u670D\u52A1\u5F02\u5E38\u5566,\u8BF7\u91CD\u65B0\u5C1D\u8BD5",
+      ? "The Service Is Abnormal,Please Try Again!"
+      : "The Service Is Abnormal,Please Try Again",
   Ei = (e = {}) => ({
     token: Kh(),
     U: oc,
@@ -7841,7 +7841,7 @@ const Bo = (e) => Lc(Object.entries(e).map(([t, n]) => [t, jc(n, t)])),
   c4 = "input",
   Mi = ["", "default", "small", "large"],
   f4 = { large: 40, default: 32, small: 24 },
-  hb = (e) => /([(\uAC00-\uD7AF)|(\u3130-\u318F)])+/gi.test(e),
+  hb = (e) => /([(가-힯)|(㄰-㆏)])+/gi.test(e),
   mb = (e) => e,
   vb = ["class", "style"],
   yb = /^on[A-Z]/,
@@ -9346,9 +9346,9 @@ var Vc = function (t, n, r, o, s, i) {
       f = "(?:\\S+(?::\\S*)?@)?",
       d = l.v4().source,
       c = l.v6().source,
-      g = "(?:(?:[a-z\\u00a1-\\uffff0-9][-_]*)*[a-z\\u00a1-\\uffff0-9]+)",
-      h = "(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*",
-      v = "(?:\\.(?:[a-z\\u00a1-\\uffff]{2,}))",
+      g = "(?:(?:[a-z\¡-\￿0-9][-_]*)*[a-z\¡-\￿0-9]+)",
+      h = "(?:\\.(?:[a-z\¡-\￿0-9]-*)*[a-z\¡-\￿0-9]+)*",
+      v = "(?:\\.(?:[a-z\¡-\￿]{2,}))",
       _ = "(?::\\d{2,5})?",
       w = '(?:[/?#][^\\s"]*)?',
       y =
@@ -9371,7 +9371,7 @@ var Vc = function (t, n, r, o, s, i) {
   },
   hl = {
     email:
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+\.)+[a-zA-Z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]{2,}))$/,
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9 -퟿豈-﷏ﷰ-￯]+\.)+[a-zA-Z -퟿豈-﷏ﷰ-￯]{2,}))$/,
     hex: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/i,
   },
   Xn = {
@@ -9448,7 +9448,7 @@ var Vc = function (t, n, r, o, s, i) {
     var i = typeof t.len == "number",
       a = typeof t.min == "number",
       l = typeof t.max == "number",
-      u = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g,
+      u = /[\ud800-\udbff][\udc00-\udfff]/g,
       f = n,
       d = null,
       c = typeof n == "number",
@@ -10551,18 +10551,18 @@ const U_ = (e, t, n) => {
       ? t.indexOf("http://") == -1 && t.indexOf("https://") == -1
         ? n(
             new Error(
-              "\u8BF7\u8F93\u5165\u6B63\u786E\u7684\u5185\u5BB9URL\u5730\u5740"
+              "Please Enter The Correct ContentURLAddress"
             )
           )
         : n()
-      : n(new Error("\u8BF7\u8F93\u5165\u5185\u5BB9URL\u5730\u5740"));
+      : n(new Error("Please Enter The ContentURLAddress"));
   },
   p4 = (e, t, n) => {
     t
       ? t.length > 6
-        ? n(new Error("\u6700\u591A\u652F\u63016\u4E2A\u5B57\u7B26"))
+        ? n(new Error("Support6Individual Character"))
         : n()
-      : n(new Error("\u8BF7\u8F93\u5165\u5BFC\u822A\u540D\u79F0"));
+      : n(new Error("Please Enter The Navigation Name"));
   };
 let qs = !1,
   rn = {};
@@ -10960,28 +10960,28 @@ const v2 = {
           title: [
             {
               required: !1,
-              message: "\u8BF7\u8F93\u5165\u5185\u5BB9\u6807\u9898",
+              message: "Please Enter The ContentTitle",
               trigger: "blur",
             },
           ],
           tags: [
             {
               required: !1,
-              message: "\u8BF7\u9009\u62E9\u5185\u5BB9\u6807\u7B7E",
+              message: "Please Select The Content Tag",
               trigger: "blur",
             },
           ],
           lables: [
             {
               required: !1,
-              message: "\u8BF7\u9009\u62E9\u5185\u5BB9\u5206\u7C7B",
+              message: "Please Select The Content Classification",
               trigger: "blur",
             },
           ],
           description: [
             {
               required: !1,
-              message: "\u8BF7\u8F93\u5165\u5185\u5BB9\u63CF\u8FF0",
+              message: "Please Enter The ContentDescribe",
               trigger: "blur",
             },
           ],
@@ -10998,11 +10998,11 @@ const v2 = {
                 userId: d(),
               })
               .then(() => {
-                Wo.success("\u63D0\u4EA4\u6210\u529F"), t.emit("onReset");
+                Wo.success("Submitted Successfully"), t.emit("onReset");
               })
               .catch((O) => {
                 Wo.error(
-                  O || "\u63D0\u4EA4\u5931\u8D25\u8BF7\u91CD\u65B0\u63D0\u4EA4"
+                  O || "Please Submit Re -Submitting Failure"
                 );
               })
               .finally(() => {
@@ -11124,17 +11124,17 @@ const v2 = {
   b2 = { class: "num" },
   _2 = { class: "alt-msg" },
   w2 = Wt(
-    " \u{1F916}\u4E07\u7269\u7686\u94FE\u63A5\uFF0C\u5206\u4EAB\u4F60\u8BA4\u4E3A\u6709\u4EF7\u503C\u7684\u5185\u5BB9\uFF0C\u88AB\u6536\u5F55\u540E\u5C06\u83B7\u5F97\u5B98\u65B9\u79EF\u5206\u5956\u52B1\uFF0C\u63D0\u5347\u60A8\u5728\u793E\u533A\u7684\u77E5\u540D\u5EA6\u3002 "
+    " \u{1F916}All Things Are Linking，Share The Content You Think Are Valuable，After Being Included, The Official Points Will Be Awarded，Improving Your Popularity In The Community。 "
   ),
   E2 = { class: "tx-r" },
-  T2 = Wt(" \u8054\u7CFB\u6211\u4EEC "),
+  T2 = Wt(" Contact Us "),
   C2 = Wt(
-    " \uFF0C\u6210\u4E3A\u6211\u4EEC\u7684\u4EA7\u54C1\u5171\u5EFA\u8005\u{1F44B},\u63D0\u5347\u6BCF\u65E5\u5206\u4EAB\u6570\u91CF\u9650\u5236\u548C\u66F4\u591A\u6D41\u91CF\u66DD\u5149\u3002(\u53EA\u6536\u5F55\u4F18\u8D28\u5185\u5BB9) "
+    " ，Become Our Product Co -Owner\u{1F44B},Increase The Daily Share Limit And More Traffic Exposure。(Only Include High -Quality Content) "
   ),
-  x2 = Wt(" \u81EA\u52A8\u8BC6\u522B "),
-  A2 = Wt(" \u91CD\u65B0\u8BC6\u522B "),
+  x2 = Wt(" Automatic Identification "),
+  A2 = Wt(" Re -Identify "),
   $2 = { class: "tx-r bts" },
-  O2 = Wt(" \u63D0\u4EA4 ");
+  O2 = Wt(" Submit ");
 function S2(e, t, n, r, o, s) {
   const i = wn("EtabBt"),
     a = wn("el-input"),
@@ -11182,7 +11182,7 @@ function S2(e, t, n, r, o, s) {
               : (J(),
                 je(
                   l,
-                  { key: 0, prop: "url", label: "\u5185\u5BB9\u94FE\u63A5" },
+                  { key: 0, prop: "url", label: "Content Link" },
                   {
                     default: Ce(() => [
                       D(
@@ -11194,7 +11194,7 @@ function S2(e, t, n, r, o, s) {
                             t[1] || (t[1] = (c) => (r.qfrom.url = c)),
                           size: "large",
                           placeholder:
-                            "\u8BF7\u8F93\u5165\u5185\u5BB9\u94FE\u63A5",
+                            "Please Enter The Content链接",
                           name: "url",
                         },
                         null,
@@ -11218,7 +11218,7 @@ function S2(e, t, n, r, o, s) {
                 )),
             D(
               l,
-              { prop: "title", label: "\u6807\u9898" },
+              { prop: "title", label: "Title" },
               {
                 default: Ce(() => [
                   D(
@@ -11229,7 +11229,7 @@ function S2(e, t, n, r, o, s) {
                       "onUpdate:modelValue":
                         t[2] || (t[2] = (c) => (r.qfrom.title = c)),
                       size: "large",
-                      placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9\u6807\u9898",
+                      placeholder: "Please Enter The ContentTitle",
                       name: "title",
                     },
                     null,
@@ -11257,7 +11257,7 @@ function S2(e, t, n, r, o, s) {
             ),
             D(
               l,
-              { prop: "lables", label: "\u5206\u7C7B" },
+              { prop: "lables", label: "Classification" },
               {
                 default: Ce(() => [
                   D(
@@ -11281,7 +11281,7 @@ function S2(e, t, n, r, o, s) {
                       modelValue: r.qfrom.lables,
                       "onUpdate:modelValue":
                         t[4] || (t[4] = (c) => (r.qfrom.lables = c)),
-                      placeholder: "\u8BF7\u9009\u62E9\u5206\u7C7B",
+                      placeholder: "请选择Classification",
                     },
                     null,
                     8,
@@ -11293,7 +11293,7 @@ function S2(e, t, n, r, o, s) {
             ),
             D(
               l,
-              { prop: "tags", label: "\u6807\u7B7E" },
+              { prop: "tags", label: "Label" },
               {
                 default: Ce(() => [
                   D(
@@ -11316,7 +11316,7 @@ function S2(e, t, n, r, o, s) {
                       modelValue: r.qfrom.tags,
                       "onUpdate:modelValue":
                         t[6] || (t[6] = (c) => (r.qfrom.tags = c)),
-                      placeholder: "\u8BF7\u9009\u62E9\u6240\u5C5E\u6807\u7B7E",
+                      placeholder: "请选择所属Label",
                     },
                     null,
                     8,
@@ -11328,7 +11328,7 @@ function S2(e, t, n, r, o, s) {
             ),
             D(
               l,
-              { prop: "description", label: "\u63CF\u8FF0" },
+              { prop: "description", label: "Describe" },
               {
                 default: Ce(() => [
                   D(
@@ -11340,7 +11340,7 @@ function S2(e, t, n, r, o, s) {
                       "onUpdate:modelValue":
                         t[7] || (t[7] = (c) => (r.qfrom.description = c)),
                       size: "large",
-                      placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9\u63CF\u8FF0",
+                      placeholder: "Please Enter The ContentDescribe",
                       name: "description",
                     },
                     null,

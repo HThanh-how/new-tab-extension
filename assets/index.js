@@ -1565,7 +1565,7 @@ function Hc(e, t, n, o, a, s) {
                     )),
                 },
                 ye(
-                  e.userInfo.token ? "\u9000\u51FA\u767B\u5F55" : "\u767B\u5F55"
+                  e.userInfo.token ? "Sign Out" : "Log In"
                 ),
                 1
               ))
@@ -1845,7 +1845,7 @@ var ze = ((e) => (
   ))(at || {}),
   Jr = ((e) => (
     (e.Error =
-      "\u670D\u52A1\u5668\u5F02\u5E38\uFF0C\u8BF7\u8054\u7CFB\u5FAE\u4FE1\u53CD\u9988:\u300AJsGuiGe\u300B!"),
+      "Server Abnormalities，Please Contact Wechat Feedback:《JsGuiGe》!"),
     e
   ))(Jr || {});
 class Xc {
@@ -1878,11 +1878,11 @@ class Zc {
     Ht(this, "retryNumber", 0);
   }
   connection(t) {
-    Sn.log("\u6570\u636E\u5E93\u8FDE\u63A5\u8017\u65F6");
+    Sn.log("Time To Database Connection");
     const n = Jc.open(this.dbName, this.dbVersion);
     (n.onsuccess = (o) => {
       (this.db = o.target.result),
-        Sn.log("\u6570\u636E\u5E93\u8FDE\u63A5\u8017\u65F6");
+        Sn.log("Time To Database Connection");
       const a = Ks.filter(
         (s) => !this.db.objectStoreNames.contains(s.tableName)
       );
@@ -1900,9 +1900,9 @@ class Zc {
           : t(Jr.Error);
       }),
       (n.onupgradeneeded = (o) => {
-        Sn.log("\u521B\u5EFA\u6570\u636E\u5E93\u8868"),
+        Sn.log("Create A Database Table"),
           this.createObjectStores(o.target.result, Ks),
-          Sn.log("\u521B\u5EFA\u6570\u636E\u5E93\u8868");
+          Sn.log("Create A Database Table");
       });
   }
   createObjectStores(t, n) {
@@ -2077,7 +2077,7 @@ const eu = {
       icon: "/static/images/search/baidu.svg",
       query:
         "https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&form=etab&wd=",
-      name: "\u767E\u5EA6",
+      name: "Baidu",
       checked: !0,
       createtime: 7,
     },
@@ -2119,7 +2119,7 @@ const eu = {
     {
       icon: "/static/images/search/bilibili.svg",
       query: "https://search.bilibili.com/all?keyword=",
-      name: "\u54D4\u54E9\u54D4\u54E9",
+      name: "Bilibili",
       checked: !1,
       createtime: 0,
     },
@@ -2635,11 +2635,11 @@ const Nf = K({
   Pf = { class: "nav-tabs" },
   Rf = { class: "nav-tabs_item_warp" },
   Ff = oi(() =>
-    h("div", { class: "d-elip nav-tabs_item_title" }, "\u684C\u9762", -1)
+    h("div", { class: "d-elip nav-tabs_item_title" }, "Desktop", -1)
   ),
   zf = { class: "nav-tabs_item_warp" },
   Vf = oi(() =>
-    h("div", { class: "d-elip nav-tabs_item_title" }, "\u770B\u770B", -1)
+    h("div", { class: "d-elip nav-tabs_item_title" }, "Have A Look", -1)
   ),
   jf = { class: "nav-tabs_item_warp" };
 function Hf(e, t, n, o, a, s) {
@@ -2957,7 +2957,7 @@ const np = K({
               e.setUserInfo({ ...d.data, avatarUrl: "icon/iconx128.png" }),
               n.setLogin(!1),
               n.setLoginHash(new Date().getTime().toString()),
-              ce.success("\u767B\u9646\u6210\u529F"))
+              ce.success("Landed Successfully"))
             : ce.error(d.data.msg);
         } catch (f) {
           ce.error(f);
@@ -2967,7 +2967,7 @@ const np = K({
         qe.connection((d) => {
           if (d)
             ce.error(
-              "\u670D\u52A1\u5F02\u5E38,\u8BF7\u5237\u65B0\u5E38\u8BC6!"
+              "Service Abnormalities,Please Refresh Common Sense!"
             );
           else {
             n.setStart(!0);
@@ -3433,7 +3433,7 @@ const wp = K({
   Ep = (e) => (Nn("data-v-bb6c2582"), (e = e()), Pn(), e),
   Sp = { id: "etab-serach-box", ref: "serachDom", class: "etab-serach-box" },
   $p = { class: "etab-serach" },
-  Cp = Ep(() => h("span", null, "\u641C\u7D22", -1)),
+  Cp = Ep(() => h("span", null, "Search", -1)),
   kp = [Cp],
   Ap = { key: 0 };
 function Ip(e, t, n, o, a, s) {
@@ -3459,7 +3459,7 @@ function Ip(e, t, n, o, a, s) {
                 "onUpdate:modelValue":
                   t[1] || (t[1] = (p) => (e.qform.keyName = p)),
                 class: "w-50 m-2",
-                placeholder: "\u8BF7\u8F93\u5165\u5173\u952E\u8BCD",
+                placeholder: "Please Enter A Keyword",
                 clearable: "",
                 onKeyup: Dr(e.onOpenQuery, ["enter"]),
                 onInput: e.onChange,
@@ -3746,21 +3746,21 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
       size: it.med,
       class: yt.C2x2,
       mens: { comName: Ke.iconMen, sizes: [...Zs] },
-      data: { code: P.msg, type: H.com, appName: "\u6BCF\u65E5\u4E00\u8A00" },
+      data: { code: P.msg, type: H.com, appName: "One Day A Day" },
     },
     {
       name: P.news,
       size: it.max,
       class: yt.Max,
       mens: { comName: Ke.iconMen, sizes: [...Zs] },
-      data: { code: P.news, type: H.com, appName: "\u4ECA\u65E5\u70ED\u641C" },
+      data: { code: P.news, type: H.com, appName: "Hot Search Today" },
     },
     {
       name: P.task,
       size: it.med,
       class: yt.C2x2,
       mens: { comName: Ke.iconMen, sizes: [Fe.Min, Fe.Med2, Fe.Max3] },
-      data: { code: P.task, type: H.com, appName: "\u4ECA\u65E5\u4E8B\u9879" },
+      data: { code: P.task, type: H.com, appName: "Today'S Matters" },
     },
     {
       name: P.gpt,
@@ -3780,7 +3780,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
       size: it.med,
       class: yt.C2x2,
       mens: { comName: Ke.iconMen, sizes: [Fe.Min2, Fe.Med2] },
-      data: { code: P.wm, type: H.com, appName: "\u5916\u5356\u5238" },
+      data: { code: P.wm, type: H.com, appName: "Takeaway Coupon" },
     },
     {
       name: P.Calendar,
@@ -3790,7 +3790,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         comName: Ke.iconMen,
         sizes: [Fe.Min, Fe.Min2x1, Fe.Med, Fe.Max2],
       },
-      data: { code: P.Calendar, type: H.com, appName: "\u65E5\u5386" },
+      data: { code: P.Calendar, type: H.com, appName: "Calendar" },
     },
     {
       name: P.EtabChrome,
@@ -3801,7 +3801,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.Extensions,
         type: H.com,
         icon: G + "/app/extensions.svg",
-        appName: "\u63D2\u4EF6\u7BA1\u7406",
+        appName: "Plug -In Management",
         url: `${mo()}://extensions/`,
         bg: "#9c9c9c",
       },
@@ -3815,7 +3815,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.Historys,
         type: H.com,
         icon: G + "/app/historys.png",
-        appName: "\u5386\u53F2\u8BB0\u5F55",
+        appName: "History Record",
         bg: "#ffffff",
       },
     },
@@ -3828,7 +3828,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.Books,
         type: H.com,
         icon: G + "/app/book.png",
-        appName: "\u4E66\u7B7E",
+        appName: "Bookmark",
         bg: "#ffffff",
       },
     },
@@ -3841,7 +3841,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.AppStore,
         type: H.com,
         icon: G + "/app/app-store.png",
-        appName: "\u6DFB\u52A0\u5BFC\u822A",
+        appName: "Add Navigation",
         bg: "#fff",
       },
     },
@@ -3852,7 +3852,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.baidu,
         type: H.icon,
         icon: G + "/app/baidu.png",
-        appName: "\u767E\u5EA6",
+        appName: "Baidu",
         url: "https://baidu.com",
         bg: "#197bfe",
       },
@@ -3862,7 +3862,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.yuque,
         type: H.icon,
         icon: G + "/app/yuque.png",
-        appName: "\u8BED\u96C0",
+        appName: "Sparrow",
         url: "https://yuque.com",
         bg: "#2cc458",
       },
@@ -3872,7 +3872,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.qqdocs,
         type: H.icon,
         icon: G + "/app/qqdocs.svg",
-        appName: "\u817E\u8BAF\u6587\u6863",
+        appName: "Tencent Documentation",
         url: "https://docs.qq.com",
         bg: "#1e6fff",
       },
@@ -3882,7 +3882,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.douban,
         type: H.icon,
         icon: G + "/app/douban.svg",
-        appName: "\u8C46\u74E3",
+        appName: "Douban",
         url: "https://docs.qq.com",
         bg: "#00c117",
       },
@@ -3902,7 +3902,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.sspai,
         type: H.icon,
         icon: G + "/app/sspai.svg",
-        appName: "\u5C11\u6570\u6D3E",
+        appName: "Minority",
         url: "https://sspai.com",
         bg: "#d7191a",
       },
@@ -3912,7 +3912,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.maimai,
         type: H.icon,
         icon: G + "/app/maimai.png",
-        appName: "\u8109\u8109",
+        appName: "Vein",
         url: "https://maimai.cn/web/feed_explore",
         bg: "#0052ff",
       },
@@ -3922,7 +3922,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.zhihu,
         type: H.icon,
         icon: G + "/app/zhihu.png",
-        appName: "\u77E5\u4E4E",
+        appName: "Know Almost",
         url: "https://zhihu.com",
         bg: "#007ce6",
       },
@@ -3932,7 +3932,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.xhs,
         type: H.icon,
         icon: G + "/app/xhs.png",
-        appName: "\u5C0F\u7EA2\u4E66",
+        appName: "Small Red Book",
         url: "https://xiaohongshu.com",
         bg: "#ff2442",
       },
@@ -3943,7 +3943,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.jd,
         type: H.icon,
         icon: G + "/app/jd.png",
-        appName: "\u4EAC\u4E1C",
+        appName: "Jingdong",
         url: "https://itab.link/web/jd.html",
         bg: "#ec2b1c",
       },
@@ -3953,7 +3953,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.taobao,
         type: H.icon,
         icon: G + "/app/taobao.svg",
-        appName: "\u6DD8\u5B9D",
+        appName: "Taobao",
         url: "https://uland.taobao.com/",
         bg: "#ff5c00",
       },
@@ -3963,7 +3963,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.pxx,
         type: H.icon,
         icon: G + "/app/pinduoduo.png",
-        appName: "\u62FC\u591A\u591A",
+        appName: "Pinduoduo",
         url: "https://pinduoduo.com/",
         bg: "#f52324",
       },
@@ -4055,7 +4055,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.juejin,
         type: H.icon,
         icon: G + "/app/juejin.svg",
-        appName: "\u6398\u91D1",
+        appName: "Nugget",
         url: "https://juejin.cn",
         bg: "#0984fe",
       },
@@ -4065,7 +4065,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.leetcode,
         type: H.icon,
         icon: G + "/app/leetcode.svg",
-        appName: "\u529B\u6263",
+        appName: "Deduction",
         url: "https://leetcode.cn",
         bg: "#fff",
       },
@@ -4115,7 +4115,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.oschina,
         type: H.icon,
         icon: G + "/app/oschina.svg",
-        appName: "\u5F00\u6E90\u4E2D\u56FD",
+        appName: "Open Source China",
         url: "https://www.oschina.net/",
         bg: "#34b960",
       },
@@ -4125,7 +4125,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.devbaidu,
         type: H.icon,
         icon: G + "/app/kaifa.baidu.svg",
-        appName: "\u767E\u5EA6\u641C\u7D22",
+        appName: "BaiduSearch",
         url: "https://kaifa.baidu.com",
         bg: "#fff",
       },
@@ -4155,7 +4155,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.aliyun,
         type: H.icon,
         icon: G + "/app/aliyun.svg",
-        appName: "\u963F\u91CC\u4E91",
+        appName: "Ali Cloud",
         url: "https://aliyun.com/daily-act/ecs/activity_selection?userCode=x3sx2zan",
         bg: "#ff6a00",
       },
@@ -4165,7 +4165,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.txyun,
         type: H.icon,
         icon: G + "/app/txyun.svg",
-        appName: "\u817E\u8BAF\u4E91",
+        appName: "Tencent Cloud",
         url: "https://curl.qcloud.com/UJECm3NI",
         bg: "#fff",
       },
@@ -4175,7 +4175,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.hwyun,
         type: H.icon,
         icon: G + "/app/hwyun.svg",
-        appName: "\u534E\u4E3A\u4E91",
+        appName: "Huawei Cloud",
         url: "https://activity.huaweicloud.com/cps.html?fromacct=bfc9f04f-2afb-47be-8a92-588fbd2efd3b&utm_source=eWFuZzE1MDIxNjc2NTky=&utm_medium=cps&utm_campaign=201905",
         bg: "#fff",
       },
@@ -4185,7 +4185,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.jdY,
         type: H.icon,
         icon: G + "/app/jdY.svg",
-        appName: "\u4EAC\u4E1C\u4E91",
+        appName: "Jingdong云",
         url: "https://3.cn/-1P8pW6r",
         bg: "#e1251b",
       },
@@ -4215,7 +4215,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.sslk,
         type: H.icon,
         icon: G + "/app/sslk.svg",
-        appName: "36\u6C2A",
+        appName: "36Krypton",
         url: "http://36kr.com",
         bg: "#4285f4",
       },
@@ -4225,7 +4225,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.oss,
         type: H.icon,
         icon: G + "/app/oss.svg",
-        appName: "\u514D\u8D39\u56FE\u5E8A",
+        appName: "Free Map Bed",
         url: "https://pics.sunbangyan.cn",
         bg: "#fff",
       },
@@ -4235,7 +4235,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.oss,
         type: H.icon,
         icon: G + "/app/api-aa1.svg",
-        appName: "\u514D\u8D39Api",
+        appName: "FreeApi",
         url: "https://api.aa1.cn/",
         bg: "#fff",
       },
@@ -4307,7 +4307,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.design,
         type: H.icon,
         icon: G + "/app/js-design.png",
-        appName: "\u5373\u65F6\u8BBE\u8BA1",
+        appName: "Real -Time Design",
         url: "  https://js.design/",
         bg: "#eb3939",
       },
@@ -4317,7 +4317,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.gaoding,
         type: H.icon,
         icon: G + "/app/gaoding.svg",
-        appName: "\u7A3F\u5B9A\u8BBE\u8BA1",
+        appName: "Designation Design",
         url: "https://qiye.gaoding.com/",
         bg: "#2455f4",
       },
@@ -4327,7 +4327,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.ps,
         type: H.icon,
         icon: G + "/app/ps.svg",
-        appName: "\u5728\u7EBFPS",
+        appName: "OnlinePS",
         url: "http://ps.gzqizhen.com",
         bg: "#28176d",
       },
@@ -4337,7 +4337,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.xiezuocat,
         type: H.icon,
         icon: G + "/app/xiezuocat.com.svg",
-        appName: "\u5199\u4F5C\u732B",
+        appName: "Writing Cat",
         url: "https://xiezuocat.com",
         bg: "#fefefe",
       },
@@ -4347,7 +4347,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.writingo,
         type: H.icon,
         icon: G + "/app/writingo.net.svg",
-        appName: "\u706B\u5C71\u5199\u4F5C",
+        appName: "Volcanic Writing",
         url: "https://www.writingo.net/document",
         bg: "#ffffff",
       },
@@ -4357,7 +4357,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.yige,
         type: H.icon,
         icon: G + "/app/yige.baidu.webp",
-        appName: "\u6587\u5FC3\u4E00\u683C",
+        appName: "Wenxin Yidi",
         url: "https://yige.baidu.com/",
         bg: "#ffffff",
       },
@@ -4367,7 +4367,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.miaoji,
         type: H.icon,
         icon: G + "/app/miaoji.webp",
-        appName: "\u98DE\u4E66\u5999\u8BB0",
+        appName: "Feishu Miaoshi",
         url: "https://www.feishu.cn/product/minutes",
         bg: "#ffffff",
       },
@@ -4377,7 +4377,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.ghxi,
         type: H.icon,
         icon: G + "/app/ghxi.svg",
-        appName: "\u679C\u6838\u5265\u58F3",
+        appName: "Nucleus Shell",
         url: "https://ghxi.com",
         bg: "#fff",
       },
@@ -4387,7 +4387,7 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.geekbang,
         type: H.icon,
         icon: G + "/app/geekbang.svg",
-        appName: "\u6781\u5BA2\u65F6\u95F4",
+        appName: "Generous Time",
         url: "https://time.geekbang.org",
         bg: "#fff",
       },
@@ -4407,16 +4407,16 @@ const ra = { M: 1e4, I: 10001, S: 10002, A: 10003, Y: 10004, C: 10005 },
         code: P.wss,
         type: H.icon,
         icon: G + "/app/wss.png",
-        appName: "\u6587\u53D4\u53D4",
+        appName: "Uncle Wen",
         url: "http://wenshushu.cn",
         bg: "#5189ff",
       },
     },
   ],
   la = [
-    { name: "\u4E3B\u9875", id: ra.M, list: Tp.concat(ia(Op)) },
-    { name: "\u5F00\u53D1", id: ra.I, list: ia(Lp) },
-    { name: "\u5DE5\u5177", id: ra.S, list: ia(xp) },
+    { name: "Homepage", id: ra.M, list: Tp.concat(ia(Op)) },
+    { name: "Develop", id: ra.I, list: ia(Lp) },
+    { name: "Tool", id: ra.S, list: ia(xp) },
   ],
   wn = new (class {
     constructor() {
@@ -4584,7 +4584,7 @@ function jp() {
         ca.value = { backgroundImgId: r, backgroundImg: i };
       }
     },
-    onDownload: async (s, r = "\u80CC\u666F.png") => {
+    onDownload: async (s, r = "Background.png") => {
       await Mp(s, r);
     },
     onSave: async () => {
@@ -4624,23 +4624,23 @@ const Hp = K({
               window.appStorage.onPush(rt.cache, { oss: !0 });
               break;
             case "download":
-              ce.setLoading("\u6B63\u5728\u4E0B\u8F7D\u58C1\u7EB8\u4E2D"),
+              ce.setLoading("Are Downloading Wallpapers"),
                 await r(i.value.backgroundImg || o.value.backgroundImg),
                 ce.hideLoading(),
-                ce.success("\u4E0B\u8F7D\u6210\u529F");
+                ce.success("Download Successful");
               break;
             case "toggel":
               ce.hideLoading(),
-                ce.setLoading("\u6B63\u5728\u5207\u6362\u58C1\u7EB8\u4E2D");
+                ce.setLoading("In Switching Wallpaper");
               try {
                 await a(), await s(), window.appStorage.onPush(rt.cache, {});
               } catch {
                 ce.error(
-                  "\u7F51\u7EDC\u51FA\u9519\u62C9,\u7B49\u7B49\u518D\u8BD5\u8BD5"
+                  "Wrong Network,Wait And Try Again"
                 ),
                   ce.hideLoading();
               } finally {
-                ce.hideLoading(), ce.success("\u5207\u6362\u6210\u529F");
+                ce.hideLoading(), ce.success("Successfully Switch");
               }
               break;
             case "edit":
@@ -4657,16 +4657,16 @@ const Hp = K({
     },
   }),
   qp = { class: "back-men" },
-  Up = h("span", { class: "name" }, "\u6DFB\u52A0", -1),
+  Up = h("span", { class: "name" }, "Add To", -1),
   Yp = { class: "name" },
   Gp = { class: "men-item pointer flex-c" },
   Wp = { class: "men-item pointer flex-c" },
-  Kp = h("span", { class: "name" }, "\u672C\u5730\u641C\u7D22", -1),
+  Kp = h("span", { class: "name" }, "本地Search", -1),
   Qp = h("span", null, "Ctrl+F", -1),
   Xp = [Kp, Qp],
-  Jp = h("span", { class: "name" }, "\u5907\u4EFD\u4E91\u7AEF", -1),
-  Zp = h("span", { class: "name" }, "\u540C\u6B65\u4E91\u7AEF", -1),
-  e0 = h("span", { class: "name" }, "\u8BBE\u7F6E", -1);
+  Jp = h("span", { class: "name" }, "Backup Cloud", -1),
+  Zp = h("span", { class: "name" }, "Synchronous Cloud", -1),
+  e0 = h("span", { class: "name" }, "Set Up", -1);
 function t0(e, t, n, o, a, s) {
   const r = N("Plus"),
     i = N("el-icon"),
@@ -4699,8 +4699,8 @@ function t0(e, t, n, o, a, s) {
             Yp,
             ye(
               e.appEdit
-                ? "\u53D6\u6D88\u7F16\u8F91\u4E3B\u9875"
-                : "\u7F16\u8F91\u4E3B\u9875"
+                ? "取消EditHomepage"
+                : "EditHomepage"
             ),
             1
           ),
@@ -4715,7 +4715,7 @@ function t0(e, t, n, o, a, s) {
             onClick:
               t[2] || (t[2] = pe((m) => e.onMenClick("toggel"), ["stop"])),
           },
-          "\u5207\u6362\u58C1\u7EB8"
+          "Switch Wallpaper"
         ),
         A(i, null, { default: Y(() => [A(c)]), _: 1 }),
       ]),
@@ -4727,7 +4727,7 @@ function t0(e, t, n, o, a, s) {
             onClick:
               t[3] || (t[3] = pe((m) => e.onMenClick("download"), ["stop"])),
           },
-          "\u4E0B\u8F7D\u58C1\u7EB8"
+          "Download Wallpaper"
         ),
         A(i, null, { default: Y(() => [A(u)]), _: 1 }),
       ]),
@@ -4790,12 +4790,12 @@ const o0 = K({
   }),
   a0 = { class: "icon-men" },
   s0 = { key: 0, class: "men-item flex-c" },
-  r0 = h("span", { class: "name" }, "\u5E03\u5C40", -1),
+  r0 = h("span", { class: "name" }, "Layout", -1),
   i0 = { key: 1, class: "grid" },
   l0 = ["onClick"],
-  c0 = h("span", { class: "name" }, "\u7F16\u8F91", -1),
-  u0 = h("span", { class: "name" }, "\u79FB\u52A8", -1),
-  d0 = h("span", { class: "name" }, "\u5220\u9664", -1);
+  c0 = h("span", { class: "name" }, "Edit", -1),
+  u0 = h("span", { class: "name" }, "Move", -1),
+  d0 = h("span", { class: "name" }, "Delete", -1);
 function f0(e, t, n, o, a, s) {
   const r = N("Grid"),
     i = N("el-icon"),
@@ -4902,7 +4902,7 @@ const m0 = K({
         f = async (b) => {
           if (o.value.length < 2) {
             ce.error(
-              "\u5220\u9664\u5931\u8D25,\u6700\u5C11\u4FDD\u7559\u4E00\u4E2A\u5206\u7EC4!"
+              "Delete失败,Keep At Least One Group!"
             );
             return;
           }
@@ -4910,7 +4910,7 @@ const m0 = K({
             w = s.findIndex((k) => k.id === b);
           if (v != -1 && s[w].list.length > 0) {
             ce.error(
-              "\u5220\u9664\u5931\u8D25,\u5F53\u524D\u5206\u7EC4\u5B58\u5728\u5C0F\u7EC4\u4EF6!"
+              "Delete失败,The Current Packet Exists In A Module!"
             );
             return;
           }
@@ -4950,12 +4950,12 @@ const m0 = K({
               : g(w);
           }),
             window.appStorage.onPush(rt.cache, { icons: s }),
-            ce.success("\u66F4\u65B0\u6210\u529F!");
+            ce.success("Update Completed!");
         },
         _ = () => {
           if (o.value.length >= 10) {
             ce.error(
-              "\u6700\u591A\u652F\u6301\u6DFB\u52A010\u4E2A\u5206\u7EC4!"
+              "最多支持Add To10Individual Group!"
             );
             return;
           }
@@ -4995,13 +4995,13 @@ const m0 = K({
   _0 = { key: 0, class: "add-modal" },
   w0 = { class: "add-warp" },
   E0 = { class: "add-title mb-10" },
-  S0 = h0(() => h("span", null, "\u5206\u7EC4", -1)),
+  S0 = h0(() => h("span", null, "Group", -1)),
   $0 = ut("+"),
   C0 = { class: "add-list" },
-  k0 = ut("\u5220\u9664"),
+  k0 = ut("Delete"),
   A0 = { key: 0, class: "error-msg" },
   I0 = { class: "mt-10 add-bt" },
-  D0 = ut("\u786E\u8BA4\u66F4\u65B0");
+  D0 = ut("Confirm The Update");
 function T0(e, t, n, o, a, s) {
   const r = N("Setting"),
     i = N("el-icon"),
@@ -5128,7 +5128,7 @@ function T0(e, t, n, o, a, s) {
                                   {
                                     maxLength: 3,
                                     placeholder:
-                                      "\u5206\u7EC4\u540D\u79F0,\u6700\u591A\u4E09\u4E2A\u5B57\u7B26",
+                                      "Group名称,Up To Three Characters",
                                     class: "mb-10",
                                     modelValue: d.name,
                                     "onUpdate:modelValue": (f) => (d.name = f),
@@ -5165,7 +5165,7 @@ function T0(e, t, n, o, a, s) {
                                 C(
                                   "div",
                                   A0,
-                                  "\u5206\u7EC4\u540D\u79F0\u4E0D\u80FD\u4E3A\u7A7A"
+                                  "Group名称不能为空"
                                 ))
                               : X("", !0),
                           ],
@@ -5198,25 +5198,25 @@ var O0 = ke(m0, [
     ["__scopeId", "data-v-a7ed2322"],
   ]),
   ua = {
-    1: { 1: "\u6625\u8282", 15: "\u5143\u5BB5" },
-    2: { 2: "\u9F99\u62AC\u5934" },
-    5: { 5: "\u7AEF\u5348" },
-    7: { 7: "\u4E03\u5915", 15: "\u4E2D\u5143" },
-    8: { 15: "\u4E2D\u79CB" },
-    9: { 9: "\u91CD\u9633" },
-    12: { 29: "\u9664\u5915", 30: "\u9664\u5915" },
+    1: { 1: "Spring Festival", 15: "Lantern Festival" },
+    2: { 2: "Dragon'S Head" },
+    5: { 5: "Dragon Boat Festival" },
+    7: { 7: "Tanabata", 15: "Metropolitanian" },
+    8: { 15: "Mid -Autumn Festival" },
+    9: { 9: "Chongyang" },
+    12: { 29: "Lunar New Year'S Eve", 30: "Lunar New Year'S Eve" },
   },
   da = {
-    1: { 1: "\u5143\u65E6" },
-    2: { 14: "\u60C5\u4EBA\u8282" },
-    3: { 8: "\u5987\u5973\u8282" },
-    4: { 1: "\u611A\u4EBA\u8282", 4: "\u6E05\u660E\u8282" },
-    5: { 1: "\u52B3\u52A8\u8282", 4: "\u9752\u5E74\u8282" },
-    6: { 1: "\u513F\u7AE5\u8282" },
-    7: { 1: "\u5EFA\u515A\u8282" },
-    8: { 1: "\u5EFA\u519B\u8282" },
-    9: { 10: "\u6559\u5E08\u8282" },
-    10: { 1: "\u56FD\u5E86\u8282" },
+    1: { 1: "New Year" },
+    2: { 14: "Valentine'S Day" },
+    3: { 8: "Women'S Day" },
+    4: { 1: "April Fool'S Day", 4: "Ching Ming Festival" },
+    5: { 1: "Labor Day", 4: "Youth Festival" },
+    6: { 1: "Children'S Day" },
+    7: { 1: "Establishment Of A Party" },
+    8: { 1: "Army Festival" },
+    9: { 10: "Teachers' Day" },
+    10: { 1: "National Day" },
   };
 const ie = {
   lunarInfo: [
@@ -5243,70 +5243,70 @@ const ie = {
   ],
   solarMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
   gan: [
-    "\u7532",
-    "\u4E59",
-    "\u4E19",
-    "\u4E01",
-    "\u620A",
-    "\u5DF1",
-    "\u5E9A",
-    "\u8F9B",
-    "\u58EC",
-    "\u7678",
+    "First",
+    "Second",
+    "Campaign",
+    "Man",
+    "Pentagon",
+    "Has",
+    "Geng",
+    "Pungent",
+    "The Ninth Of The Ten Heavenly Stems",
+    "Deciduous",
   ],
   zhi: [
-    "\u5B50",
-    "\u4E11",
-    "\u5BC5",
-    "\u536F",
-    "\u8FB0",
-    "\u5DF3",
-    "\u5348",
-    "\u672A",
-    "\u7533",
-    "\u9149",
-    "\u620C",
-    "\u4EA5",
+    "Son",
+    "Ugly",
+    "Wink",
+    "Laid -Up",
+    "Dazzling",
+    "Sideline",
+    "Noon",
+    "Not Yet",
+    "State",
+    "Unitary",
+    "Babble",
+    "Sea",
   ],
   animals: [
-    "\u9F20",
-    "\u725B",
-    "\u864E",
-    "\u5154",
-    "\u9F99",
-    "\u86C7",
-    "\u9A6C",
-    "\u7F8A",
-    "\u7334",
-    "\u9E21",
-    "\u72D7",
-    "\u732A",
+    "Mouse",
+    "Ox",
+    "Tiger",
+    "Rabbit",
+    "Dragon",
+    "Snake",
+    "Horse",
+    "Sheep",
+    "Monkey",
+    "Chicken",
+    "Dog",
+    "Pig",
   ],
   lunarTerm: [
-    "\u5C0F\u5BD2",
-    "\u5927\u5BD2",
-    "\u7ACB\u6625",
-    "\u96E8\u6C34",
-    "\u60CA\u86F0",
-    "\u6625\u5206",
-    "\u6E05\u660E",
-    "\u8C37\u96E8",
-    "\u7ACB\u590F",
-    "\u5C0F\u6EE1",
-    "\u8292\u79CD",
-    "\u590F\u81F3",
-    "\u5C0F\u6691",
-    "\u5927\u6691",
-    "\u7ACB\u79CB",
-    "\u5904\u6691",
-    "\u767D\u9732",
-    "\u79CB\u5206",
-    "\u5BD2\u9732",
-    "\u971C\u964D",
-    "\u7ACB\u51AC",
-    "\u5C0F\u96EA",
-    "\u5927\u96EA",
-    "\u51AC\u81F3",
+    "Xiaohan",
+    "Cold",
+    "Beginning Of Spring",
+    "Rainwater",
+    "Surprise",
+    "Spring Equinox",
+    "Clear",
+    "Valley Rain",
+    "Beginning Of Summer",
+    "Full",
+    "Pimple",
+    "Summer Solstice",
+    "Chitice",
+    "Hot Summer",
+    "Beginning Of Autumn",
+    "Dawn",
+    "White Dew",
+    "Autumnal Equinox",
+    "Cold Dew",
+    "Frost Drop",
+    "Beginning Of Winter",
+    "Little Snow",
+    "Snowy",
+    "Winter Solstice",
   ],
   lTermInfo: [
     "9778397bd097c36b0b6fc9274c91aa",
@@ -5512,45 +5512,45 @@ const ie = {
     "7f0e27f1487f531b0b0bb0b6fb0722",
   ],
   nStr1: [
-    "\u65E5",
-    "\u4E00",
-    "\u4E8C",
-    "\u4E09",
-    "\u56DB",
-    "\u4E94",
-    "\u516D",
-    "\u4E03",
-    "\u516B",
-    "\u4E5D",
-    "\u5341",
+    "Day",
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
   ],
-  nStr2: ["\u521D", "\u5341", "\u5EFF", "\u5345"],
+  nStr2: ["Early", "Ten", "Twenty", "Thirty"],
   nStr3: [
-    "\u6B63",
-    "\u4E8C",
-    "\u4E09",
-    "\u56DB",
-    "\u4E94",
-    "\u516D",
-    "\u4E03",
-    "\u516B",
-    "\u4E5D",
-    "\u5341",
-    "\u51AC",
-    "\u814A",
+    "Just",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+    "Winter",
+    "Bald",
   ],
   nStr4: [
-    "\u96F6",
-    "\u4E00",
-    "\u4E8C",
-    "\u4E09",
-    "\u56DB",
-    "\u4E94",
-    "\u516D",
-    "\u4E03",
-    "\u516B",
-    "\u4E5D",
-    "\u5341",
+    "Zero",
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
   ],
   lYearDays: function (e) {
     var t,
@@ -5627,24 +5627,24 @@ const ie = {
       n = parseInt(((e % 1e3) / 100).toString()),
       o = parseInt(((e % 100) / 10).toString()),
       a = e % 10;
-    return ie.nStr4[t] + ie.nStr4[n] + ie.nStr4[o] + ie.nStr4[a] + "\u5E74";
+    return ie.nStr4[t] + ie.nStr4[n] + ie.nStr4[o] + ie.nStr4[a] + "Year";
   },
   toChinaMonth: function (e) {
     if (e > 12 || e < 1) return -1;
     var t = ie.nStr3[e - 1];
-    return (t += "\u6708");
+    return (t += "Moon");
   },
   toChinaDay: function (e) {
     var t;
     switch (e) {
       case 10:
-        t = "\u521D\u5341";
+        t = "EarlyTen";
         break;
       case 20:
-        t = "\u4E8C\u5341";
+        t = "TwoTen";
         break;
       case 30:
-        t = "\u4E09\u5341";
+        t = "ThreeTen";
         break;
       default:
         (t = ie.nStr2[Math.floor(e / 10)]), (t += ie.nStr1[e % 10]);
@@ -5710,7 +5710,7 @@ const ie = {
     [2022, 2025, 2026, 2027, 2028, 2029, 2031, 2032].includes(e) &&
       m === 12 &&
       g === 29 &&
-      (Q = "\u9664\u5915");
+      (Q = "Lunar New Year'S Eve");
     var re = da[t] && da[t][n] ? da[t][n] : "";
     return {
       lYear: d,
@@ -5718,7 +5718,7 @@ const ie = {
       lDay: g,
       animal: ie.getAnimal(d),
       yearCn: ie.toChinaYear(d),
-      monthCn: (p && f === m ? "\u95F0" : "") + ie.toChinaMonth(m),
+      monthCn: (p && f === m ? "Spoiled" : "") + ie.toChinaMonth(m),
       dayCn: ie.toChinaDay(g),
       cYear: e,
       cMonth: t,
@@ -5729,7 +5729,7 @@ const ie = {
       isToday: l,
       isLeap: p,
       nWeek: c,
-      ncWeek: "\u661F\u671F" + u,
+      ncWeek: "Week" + u,
       isTerm: T,
       term: x,
       lunarFestival: Q,
@@ -5787,13 +5787,13 @@ function x0() {
       return {
         date: i,
         ncWeek: {
-          0: "\u65E5",
-          1: "\u4E00",
-          2: "\u4E8C",
-          3: "\u4E09",
-          4: "\u56DB",
-          5: "\u4E94",
-          6: "\u516D",
+          0: "Day",
+          1: "One",
+          2: "Two",
+          3: "Three",
+          4: "Four",
+          5: "Five",
+          6: "Six",
         }[d],
         month: t(r),
         hours: l,
@@ -5858,19 +5858,19 @@ function F0(e, t, n, o, a, s) {
         h(
           "span",
           { class: te(["time", { show: e.theme.variables.showMonth }]) },
-          ye(e.dateObj.month) + "\u6708" + ye(e.dateObj.date) + "\u65E5 ",
+          ye(e.dateObj.month) + "Moon" + ye(e.dateObj.date) + "Day ",
           3
         ),
         h(
           "span",
           { class: te(["time", { show: e.theme.variables.showDate }]) },
-          "\u661F\u671F" + ye(e.dateObj.ncWeek),
+          "Week" + ye(e.dateObj.ncWeek),
           3
         ),
         h(
           "span",
           { class: te(["time", { show: e.theme.variables.showLunar }]) },
-          " \u519C\u5386" + ye(e.dateObj.monthCn) + ye(e.dateObj.dayCn),
+          " Lunar Calendar" + ye(e.dateObj.monthCn) + ye(e.dateObj.dayCn),
           3
         ),
       ]),
@@ -6427,9 +6427,9 @@ const Q0 = K({
             g.value[se].list.splice(_.value, 1), $();
           } else
             L === "move"
-              ? (ce.setLoading("\u52AA\u529B\u52A0\u8F7D\u4E2D"), d(Me.AppMove))
+              ? (ce.setLoading("Strive To Load"), d(Me.AppMove))
               : L === "update"
-              ? (ce.setLoading("\u52AA\u529B\u52A0\u8F7D\u4E2D"),
+              ? (ce.setLoading("Strive To Load"),
                 d(Me.AppUpdate))
               : L === "localQuery" && j();
         },
@@ -6512,9 +6512,9 @@ const Q0 = K({
             });
         },
         $ = () => {
-          console.time("\u6570\u636E\u5B58\u50A8\u4E2D"),
+          console.time("Data Storage"),
             window.appStorage.onPush(rt.cache, { icons: g.value, isQuery: !1 }),
-            console.timeEnd("\u6570\u636E\u5B58\u50A8\u4E2D");
+            console.timeEnd("Data Storage");
         },
         q = () => {
           ce.hideLoading();
@@ -6527,11 +6527,11 @@ const Q0 = K({
         },
         be = async (L) => {
           Sn.log(
-            "\u52A0\u8F7D\u7F13\u5B58\u7EC4\u4EF6\u914D\u7F6E\u8017\u65F6"
+            "Time To Load The Cache Component Configuration"
           );
           const R = await wn.getAppIcons();
           Sn.log(
-            "\u52A0\u8F7D\u7F13\u5B58\u7EC4\u4EF6\u914D\u7F6E\u8017\u65F6"
+            "Time To Load The Cache Component Configuration"
           ),
             (g.value = R),
             typeof L == "function" && L();
@@ -6554,10 +6554,10 @@ const Q0 = K({
             }),
             window.appStorage.onStorage(rt.aliyun, async () => {
               if (!a.validateLogin()) {
-                ce.success("\u4E91\u7AEF\u540C\u6B65\u6210\u529F");
+                ce.success("Cloud Synchronization Success");
                 try {
                   ce.setLoading(
-                    "\u6B63\u5728\u540C\u6B65\u4E91\u7AEF\u6570\u636E\u4E2D"
+                    "Just在Synchronous Cloud数据中"
                   );
                   const L = await jn.getYun({ keyName: "user.json" }),
                     R = await jn.getYun({ keyName: "user-task.json" }),
@@ -6577,10 +6577,10 @@ const Q0 = K({
                       ve.length > 0 ? ve[ve.length - 1].taskList : []
                     ),
                     ce.hideLoading(),
-                    ce.success("\u4E91\u7AEF\u540C\u6B65\u6210\u529F");
+                    ce.success("Cloud Synchronization Success");
                 } catch {
                   ce.hideLoading(),
-                    ce.error("\u4E91\u7AEF\u540C\u6B65\u5931\u8D25");
+                    ce.error("Cloud Synchronization Failed");
                 }
               }
             }),
@@ -6622,7 +6622,7 @@ const Q0 = K({
                   return new File([jt], vt);
                 };
                 try {
-                  ce.setLoading("\u6B63\u5728\u4E91\u7AEF\u5907\u4EFD");
+                  ce.setLoading("Just在云端备份");
                   const pn = _o(Xe, "user.json"),
                     vt = (await er.onGet()) || [],
                     jt = _o(vt, "user-task.json");
@@ -6631,11 +6631,11 @@ const Q0 = K({
                     jn.onPush({ file: jt }),
                   ]),
                     ce.hideLoading(),
-                    ce.success("\u4E91\u7AEF\u5907\u4EFD\u6210\u529F");
+                    ce.success("Cloud Backup Success");
                 } catch {
                   (gt = !1),
                     ce.hideLoading(),
-                    ce.error("\u5907\u4EFD\u5931\u8D25");
+                    ce.error("Backup Failure");
                 }
               }
               gt && se !== !1 && be(),
@@ -6646,7 +6646,7 @@ const Q0 = K({
               if (re() || i.value) return;
               const R = L.keyName,
                 se = L.data;
-              ce.setLoading("\u52AA\u529B\u52A0\u8F7D\u4E2D"),
+              ce.setLoading("Strive To Load"),
                 (v.value = !1),
                 se && (w.value = se),
                 d(R);
@@ -6773,7 +6773,7 @@ function l1(e, t, n, o, a, s) {
                             l,
                             {
                               content:
-                                "\u5FEB\u6377\u952E\u5524\u8D77\u5168\u5C40\u641C\u7D22",
+                                "快捷键唤起全局Search",
                               placement: "top",
                               effect: "dark",
                             },
@@ -7014,7 +7014,7 @@ const u1 = K({
   }),
   d1 = (e) => (Nn("data-v-45457ca6"), (e = e()), Pn(), e),
   f1 = { class: "etab-serach-box input-serach" },
-  p1 = d1(() => h("span", null, "\u641C\u7D22", -1)),
+  p1 = d1(() => h("span", null, "Search", -1)),
   m1 = [p1];
 function h1(e, t, n, o, a, s) {
   const r = N("EtabInput");
@@ -7034,7 +7034,7 @@ function h1(e, t, n, o, a, s) {
                 t[0] || (t[0] = (i) => (e.qform.keyName = i)),
               size: "large",
               class: "w-50 m-2",
-              placeholder: "\u8BF7\u8F93\u5165\u5173\u952E\u8BCD",
+              placeholder: "Please Enter A Keyword",
               clearable: "",
               onClear: e.onQuery,
               onBlur: t[1] || (t[1] = (i) => (e.isBlur = !1)),
@@ -11167,7 +11167,7 @@ const Li = (e) => {
   },
   xi = (e) => `${e.title}
 ${e.url}
-\u5FAE\u4FE1\u641C\u4E00\u641C\u{1F449} #etab\u65B0\u6807\u7B7E\u9875`;
+微信搜One搜\u{1F449} #etabNew Tab`;
 const P2 = {
     name: "AppLables",
     emits: ["update:modelValue"],
@@ -11283,7 +11283,7 @@ const j2 = {
   },
   H2 = { class: "set" },
   q2 = { class: "tx-r bts" },
-  U2 = ut(" \u4FDD\u5B58 ");
+  U2 = ut(" Save ");
 function Y2(e, t, n, o, a, s) {
   const r = N("AppLables"),
     i = N("EtabBt");
@@ -11375,7 +11375,7 @@ const W2 = K({
             const b = e.list.findIndex((v) => v.id === Number(_));
             e.list.splice(b, 1), await ln.delBlogLike(_);
           } catch {
-            ce.error("\u5220\u9664\u5931\u8D25");
+            ce.error("Delete失败");
           }
         },
         u = (_) => {
@@ -11398,7 +11398,7 @@ const W2 = K({
         },
         p = (_) => {
           const b = e.list[_];
-          Li(xi(b)), ce.success("\u6587\u7AE0\u590D\u5236\u6210\u529F");
+          Li(xi(b)), ce.success("Successful Article Replication");
         },
         m = async (_) => {
           (e.loading = !0), (o.value = !1), (t.queryKey = _), t.pageIndex++;
@@ -11493,7 +11493,7 @@ function cg(e, t, n, o, a, s) {
             onClick:
               t[0] || (t[0] = pe((m) => e.onTab("getBlogLike"), ["stop"])),
           },
-          " \u6536\u85CF ",
+          " Collect ",
           2
         ),
         h(
@@ -11502,7 +11502,7 @@ function cg(e, t, n, o, a, s) {
             class: te(["men", { "men-s": e.tabName == "getPage" }]),
             onClick: t[1] || (t[1] = pe((m) => e.onTab("getPage"), ["stop"])),
           },
-          " \u5DF2\u53D1\u5E03 ",
+          " Published ",
           2
         ),
         h(
@@ -11512,7 +11512,7 @@ function cg(e, t, n, o, a, s) {
             onClick:
               t[2] || (t[2] = pe((m) => e.onTab("getBlogTask"), ["stop"])),
           },
-          " \u5BA1\u6838\u4E2D ",
+          " Under Review ",
           2
         ),
       ]),
@@ -11566,8 +11566,8 @@ function cg(e, t, n, o, a, s) {
                                 ut(
                                   ye(
                                     m.state === 1
-                                      ? "\u4E0D\u901A\u8FC7"
-                                      : "\u5BA1\u6838\u4E2D"
+                                      ? "Fail"
+                                      : "Under Review"
                                   ) + " ",
                                   1
                                 ),
@@ -11582,7 +11582,7 @@ function cg(e, t, n, o, a, s) {
                                           t[3] ||
                                           (t[3] = (S) =>
                                             e.onOpen(
-                                              "https://etab.store/docs/cn/about/cooperate.html#\u4EE5\u4E0B\u6587\u7AE0\u5C06\u4E0D\u4E88\u4EE5\u91C7\u7528"
+                                              "https://etab.store/docs/cn/about/cooperate.html#The Following Article Will Not Be Adopted"
                                             )),
                                       },
                                       [
@@ -11714,10 +11714,10 @@ function cg(e, t, n, o, a, s) {
             !e.tableData.loading && e.tableData.list.length < 1
               ? (y(),
                 C("div", ig, [
-                  A(d, { description: "\u6682\u65E0\u6570\u636E" }),
+                  A(d, { description: "No Data" }),
                 ]))
               : e.noMore && !e.tableData.loading
-              ? (y(), C("div", lg, "\u6211\u662F\u6709\u5E95\u7EBF\u7684"))
+              ? (y(), C("div", lg, "I Have A Bottom Line"))
               : X("", !0),
           ],
           8,
@@ -11737,13 +11737,13 @@ var ug = ke(W2, [
 ]);
 const dg = {
     AppArticle: {
-      title: "\u5185\u5BB9\u6295\u7A3F",
+      title: "Content Submission",
       comName: "AppArticle",
       width: "676px",
       className: "app-article",
     },
     AppSetLab: {
-      title: "\u9009\u62E9\u4F60\u611F\u5174\u8DA3\u7684\u5185\u5BB9",
+      title: "Choose What You Are Interested",
       comName: "AppSetLab",
       width: "520px",
       className: "app-set-lab",
@@ -11774,8 +11774,8 @@ const dg = {
         c = M(At.Page);
       let u = !1;
       const d = M([
-          { title: "\u63A8\u8350", value: At.Page },
-          { title: "\u6211\u7684", value: At.Like },
+          { title: "Recommend", value: At.Page },
+          { title: "Mine", value: At.Like },
         ]),
         f = M(!1),
         p = M(new Array(6).fill(0)),
@@ -11858,7 +11858,7 @@ const dg = {
         },
         x = (D) => {
           const F = a.list.find((Z) => Z.id === D);
-          Li(xi(F)), ce.success("\u590D\u5236\u6210\u529F");
+          Li(xi(F)), ce.success("Replication");
         },
         U = (D) => {
           const F = a.list.findIndex((me) => me.id === D);
@@ -11981,9 +11981,9 @@ const dg = {
   bg = ["onClick"],
   yg = { class: "span" },
   _g = { class: "add-bt" },
-  wg = Bi(() => h("div", { class: "ml-10" }, "\u8BBE\u7F6E", -1)),
+  wg = Bi(() => h("div", { class: "ml-10" }, "Set Up", -1)),
   Eg = { class: "add-bt" },
-  Sg = Bi(() => h("div", { class: "ml-10" }, "\u6295\u7A3F", -1)),
+  Sg = Bi(() => h("div", { class: "ml-10" }, "Submit", -1)),
   $g = { key: 0, class: "etab-blogs_list" },
   Cg = ["onClick"],
   kg = { class: "etab-blogs_item__user" },
@@ -11999,9 +11999,9 @@ const dg = {
   Ng = { key: 1, class: "flex-cc" },
   Pg = { key: 2, class: "tx-null" },
   Rg = ut(
-    " \u4ECA\u5929\u7684\u63A8\u8350\u5C31\u5230\u8FD9\u91CC\u8FA3,\u5B66\u4E60\u6025\u4E0D\u6765\u3001\u4E0D\u59A8\u56DE\u987E\u4E0B\u4ECA\u5929\u7684\u77E5\u8BC6\u{1F61C}\uFF0C\u4E5F\u53EF\u4EE5\u8BD5\u8BD5\u641C\u7D22\u4F60\u60F3\u770B\u7684\u5185\u5BB9\u{1F64B} "
+    " 今天的Recommend就到这里辣,Unsurprisingly、May Wish To Review Today'S Knowledge\u{1F61C}，也可以试试Search你想看的内容\u{1F64B} "
   ),
-  Fg = ut(" \u641C\u7D22 ");
+  Fg = ut(" Search ");
 function zg(e, t, n, o, a, s) {
   const r = N("EtabBg"),
     i = N("EtabQueryInput"),
@@ -12183,7 +12183,7 @@ function zg(e, t, n, o, a, s) {
             : X("", !0),
           !e.tableData.loading && e.tableData.list.length < 1
             ? (y(),
-              C("div", Ng, [A(d, { description: "\u6682\u65E0\u6570\u636E" })]))
+              C("div", Ng, [A(d, { description: "No Data" })]))
             : X("", !0),
           e.tableData.isEnd && e.tabValue == "getPage"
             ? (y(),

@@ -199,7 +199,7 @@ function ee(e, i, u, n, o, t) {
                 c("div", x, [
                   s(
                     d,
-                    { content: "\u4E0B\u8F7D", placement: "right" },
+                    { content: "Download", placement: "right" },
                     {
                       default: r(() => [
                         A(
@@ -222,7 +222,7 @@ function ee(e, i, u, n, o, t) {
                   ),
                   s(
                     d,
-                    { content: "\u5207\u6362\u80CC\u666F", placement: "right" },
+                    { content: "Switch Background", placement: "right" },
                     {
                       default: r(() => [
                         s(
@@ -243,7 +243,7 @@ function ee(e, i, u, n, o, t) {
                   ),
                   s(
                     d,
-                    { content: "\u5207\u6362\u4E00\u8A00", placement: "right" },
+                    { content: "Switch", placement: "right" },
                     {
                       default: r(() => [
                         s(
@@ -264,7 +264,7 @@ function ee(e, i, u, n, o, t) {
                   ),
                   s(
                     d,
-                    { content: "\u8BBE\u4E3A\u58C1\u7EB8", placement: "right" },
+                    { content: "Set As A Wallpaper", placement: "right" },
                     {
                       default: r(() => [
                         s(

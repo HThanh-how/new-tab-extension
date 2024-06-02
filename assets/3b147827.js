@@ -25,7 +25,7 @@ const f = d({
   }),
   o = (s) => (_("data-v-d7398040"), (s = s()), E(), s),
   F = m(
-    '<div class="msg flex-cc mb-10" data-v-d7398040>Scan the code to follow the public account</div><div class="warp flex-cc mb-10" data-v-d7398040><img class="img" src="https://resource.withpinbox.com/f/a96eb6a954/image/20231113/f26f648d-5a7a-48aa-93a1-d0f817f13b7a.jpeg" data-v-d7398040></div><div class="msg tx-c" data-v-d7398040>Add product discussion group</div><div class="flex-cc" data-v-d7398040><div class="emojis" data-v-d7398040><div class="emoji emoji-center" data-v-d7398040>\u{1F929}</div><div class="emoji emoji-left" data-v-d7398040>\u2764\uFE0F</div><div class="emoji emoji-right" data-v-d7398040>\u2764\uFE0F</div></div></div>',
+    '<div class="msg flex-cc mb-10" data-v-d7398040>Scan the code to follow the public account</div><div class="warp flex-cc mb-10" data-v-d7398040><img class="img" src="https://resource.withpinbox.com/f/a96eb6a954/image/20231113/f26f648d-5a7a-48aa-93a1-d0f817f13b7a.jpeg" data-v-d7398040></div><div class="msg tx-c" data-v-d7398040>Add product discussion group</div><div class="flex-cc" data-v-d7398040><div class="emojis" data-v-d7398040><div class="emoji emoji-center" data-v-d7398040>\u{1F929}</div><div class="emoji emoji-left" data-v-d7398040>❤️</div><div class="emoji emoji-right" data-v-d7398040>❤️</div></div></div>',
     4
   ),
   b = { class: "alt" },

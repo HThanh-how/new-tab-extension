@@ -93,7 +93,7 @@ const V = B({
     c(
       "p",
       { class: "loading-tx tx-c" },
-      "\u6B63\u5728\u52A0\u8F7D\u4E2D...",
+      "Loading...",
       -1
     )
   ),
@@ -102,10 +102,10 @@ const V = B({
       "p",
       { class: "ac" },
       [
-        L(" \u6253\u5F00\u5FAE\u4FE1 "),
-        c("b", { calss: "b" }, "\u626B\u4E00\u626B"),
-        L("\uFF0C "),
-        c("b", { calss: "b" }, "\u5FEB\u901F\u767B\u5F55/\u6CE8\u518C"),
+        L(" Open Wechat "),
+        c("b", { calss: "b" }, "Scan It"),
+        L("， "),
+        c("b", { calss: "b" }, "Quick Login/Register"),
       ],
       -1
     )

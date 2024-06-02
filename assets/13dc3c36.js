@@ -998,7 +998,7 @@ function vn(e, t, n, s, r, d) {
                       t[1] || (t[1] = (m) => (e.item.name = m)),
                     onInput: e.input,
                     "data-value": e.item.name,
-                    placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
+                    placeholder: "Please Enter The Content",
                     onKeyup:
                       t[2] || (t[2] = ie((m) => e.onAdd(e.index), ["enter"])),
                     onChange: e.onChangeInput,
@@ -1031,7 +1031,7 @@ var fn = ue(rn, [
   ["__scopeId", "data-v-8dc80994"],
 ]);
 const bn = (e) => {
-    const t = "\u65E0\u6807\u9898\u8BA1\u5212",
+    const t = "No Title Plan",
       s = e.filter((r) => r.title.indexOf(t) !== -1).length || 0;
     return `${t}${s + 1}`;
   },
@@ -1244,10 +1244,10 @@ const bn = (e) => {
   yn = { class: "task-bt pointer" },
   Cn = { class: "-warp" },
   $n = Ie(() =>
-    f("div", { class: "name" }, "\u66F4\u65B0\u65F6\u95F4\u5012\u5E8F", -1)
+    f("div", { class: "name" }, "Update Time Reversal", -1)
   ),
   Ln = Ie(() =>
-    f("div", { class: "name" }, "\u521B\u5EFA\u65F6\u95F4\u6B63\u5E8F", -1)
+    f("div", { class: "name" }, "Create A Positive Sequence", -1)
   ),
   En = { class: "task-bts ml-10 pointer" },
   Sn = { class: "task-mens" },
@@ -1255,8 +1255,8 @@ const bn = (e) => {
   In = { class: "task-title row-1" },
   _n = { class: "update-time" },
   Bn = { class: "quan ml-10 flex-cc" },
-  Fn = N(" \u7F6E\u9876 "),
-  Dn = N(" \u5220\u9664 "),
+  Fn = N(" Put On The Top "),
+  Dn = N(" Delete "),
   Vn = { class: "flex1 task-right" },
   An = { class: "info-title row-1" },
   zn = { class: "task-list" },
@@ -1352,7 +1352,7 @@ function Pn(e, t, n, s, r, d) {
                 t[3] || (t[3] = (g) => (e.qform.keyName = g)),
               autofocus: "",
               "suffix-icon": e.Search,
-              placeholder: "\u8BF7\u8F93\u5165\u6807\u9898\u5173\u952E\u8BCD",
+              placeholder: "Please Enter The Title Keyword",
             },
             null,
             8,
@@ -1483,7 +1483,7 @@ function Pn(e, t, n, s, r, d) {
             }
           ),
           e.menTaskList.length < 1
-            ? (c(), B(q, { key: 0, description: "\u6682\u65E0\u6570\u636E" }))
+            ? (c(), B(q, { key: 0, description: "No Data" }))
             : V("", !0),
         ]),
       ]),
@@ -1497,7 +1497,7 @@ function Pn(e, t, n, s, r, d) {
                 modelValue: e.info.title,
                 "onUpdate:modelValue":
                   t[4] || (t[4] = (g) => (e.info.title = g)),
-                placeholder: "\u8BF7\u8F93\u5165\u6807\u9898",
+                placeholder: "Please Enter The Title",
                 onBlur: e.onTitleBlur,
                 onKeyup: ie(e.onTitleBlur, ["enter"]),
               },
@@ -1567,7 +1567,7 @@ function Pn(e, t, n, s, r, d) {
                   ["modelValue", "onEnd"]
                 ))
               : (c(),
-                B(q, { key: 1, description: "\u6682\u65E0\u6570\u636E" })),
+                B(q, { key: 1, description: "No Data" })),
           ]),
           f("div", Nn, [
             b(p, { size: 28 }, { default: k(() => [b(ne)]), _: 1 }),
@@ -1579,7 +1579,7 @@ function Pn(e, t, n, s, r, d) {
                 "onUpdate:modelValue":
                   t[6] || (t[6] = (g) => (e.taskObj.name = g)),
                 placeholder:
-                  "\u8F93\u5165\u5185\u5BB9\uFF0C\u7136\u540E\u6309\u4E0B\u56DE\u8F66\u952E",
+                  "Input Content，Then Press Enter Key",
                 onKeyup: ie(e.onSave, ["enter"]),
               },
               null,

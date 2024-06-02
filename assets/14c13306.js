@@ -105,7 +105,7 @@ function J(s, e, r, d, l, c) {
                 ))
               : u("", !0),
             s.taskList.length < 1
-              ? (n(), p("section", G, "\u6682\u65E0\u6570\u636E"))
+              ? (n(), p("section", G, "No Data"))
               : u("", !0),
           ]),
         ]),

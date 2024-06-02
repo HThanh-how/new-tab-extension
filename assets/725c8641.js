@@ -141,7 +141,7 @@ function X(t, n, A, $, h, y) {
                     onClick:
                       n[2] || (n[2] = (...e) => t.onBack && t.onBack(...e)),
                   },
-                  "\u8FD4\u56DE\u4ECA\u5929"
+                  "Return Today"
                 ))
               : S("", !0),
           ]),
@@ -162,7 +162,7 @@ function X(t, n, A, $, h, y) {
                         class: E({ select: e == t.month }),
                         onClick: (M) => t.onMonth(e),
                       },
-                      p(e) + "\u6708 ",
+                      p(e) + "Moon ",
                       11,
                       Q
                     )
@@ -185,7 +185,7 @@ function X(t, n, A, $, h, y) {
                         d(
                           "div",
                           { key: c, class: "f-13 flex-cc title" },
-                          " \u661F\u671F" + p(e),
+                          " Week" + p(e),
                           1
                         )
                       )

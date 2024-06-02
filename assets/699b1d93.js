@@ -80,7 +80,7 @@ const J = V({
             ((a[n] = a[n] ? 0 : new Date().getTime()),
             Object.keys(a).filter((f) => !!a[f]).length > 5)
           ) {
-            R.error("\u6700\u591A\u9009\u62E9\u4E94\u4E2A\u65B0\u95FB\u6E90");
+            R.error("Choose Up To Five News Sources");
             return;
           }
           l.setUserInfo({ news: a });
@@ -251,7 +251,7 @@ function ie(e, l, v, d, g, w) {
                       ))
                     : !e.isLoading && e.newsList.length < 1
                     ? (i(),
-                      k(t, { key: 1, description: "\u6682\u65E0\u6570\u636E" }))
+                      k(t, { key: 1, description: "No Data" }))
                     : P("", !0),
                 ])),
                 [[y, e.isLoading]]

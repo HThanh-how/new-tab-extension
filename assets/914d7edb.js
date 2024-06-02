@@ -76,7 +76,7 @@ const be = O({
         n = f(null),
         u = A(() => {
           const l = e.list.find((c) => c.id === e.info.parentId);
-          return l ? l.title : "\u8BF7\u9009\u62E9";
+          return l ? l.title : "Please Choose";
         }),
         d = (l) => {
           s.emit("onChange", { parentId: e.list[l].id }), (_.value = !1);
@@ -196,8 +196,8 @@ const De = O({
   }),
   Ae = { class: "history-update" },
   Me = { class: "bts flex" },
-  Le = R("\u53D6\u6D88"),
-  Ne = R("\u786E\u5B9A");
+  Le = R("Cancel"),
+  Ne = R("Sure");
 function Te(e, s, _, n, u, d) {
   const l = y("el-input"),
     c = y("ESelect"),
@@ -208,7 +208,7 @@ function Te(e, s, _, n, u, d) {
     H(
       p,
       {
-        title: "\u4FDD\u5B58\u81F3\u4E66\u7B7E",
+        title: "Save To Bookmark",
         modelValue: e.visible,
         "onUpdate:modelValue": s[1] || (s[1] = (m) => (e.visible = m)),
         "z-index": 5e3,
@@ -226,7 +226,7 @@ function Te(e, s, _, n, u, d) {
                 modelValue: e.qfrom.title,
                 "onUpdate:modelValue":
                   s[0] || (s[0] = (m) => (e.qfrom.title = m)),
-                placeholder: "\u8BF7\u8F93\u5165\u540D\u79F0",
+                placeholder: "Please Enter The Name",
               },
               null,
               8,
@@ -356,7 +356,7 @@ const Ue = O({
               url: p.value.url,
               title: p.value.title,
             }),
-            pe.success("\u6DFB\u52A0\u4E66\u7B7E\u6210\u529F");
+            pe.success("Add Bookmarks Successfully");
         },
         X = async () => {
           const a = (await s.onQuery())[0].children || [],
@@ -427,7 +427,7 @@ const Ue = O({
     o(
       "div",
       { class: "header flex-c" },
-      [o("div", { class: "app-name" }, "\u5386\u53F2\u8BB0\u5F55")],
+      [o("div", { class: "app-name" }, "History Record")],
       -1
     )
   ),
@@ -465,7 +465,7 @@ function ot(e, s, _, n, u, d) {
             {
               class: "w-50 m-2",
               size: "large",
-              placeholder: "\u8F93\u5165\u5173\u952E\u8BCD\u641C\u7D22",
+              placeholder: "Enter Keyword Search",
               modelValue: e.qform.keyName,
               "onUpdate:modelValue":
                 s[0] || (s[0] = (C) => (e.qform.keyName = C)),
@@ -557,7 +557,7 @@ function ot(e, s, _, n, u, d) {
                                               onClick: (b) =>
                                                 e.onAction("add", k, ""),
                                             },
-                                            " \u6DFB\u52A0\u5230\u4E3B\u9875 ",
+                                            " Add To Homepage ",
                                             8,
                                             et
                                           ),
@@ -569,7 +569,7 @@ function ot(e, s, _, n, u, d) {
                                               onClick: (b) =>
                                                 e.onAction("update", k, ""),
                                             },
-                                            " \u4FDD\u5B58\u4E66\u7B7E ",
+                                            " Save The Bookmark ",
                                             8,
                                             tt
                                           ),
@@ -585,7 +585,7 @@ function ot(e, s, _, n, u, d) {
                                                   C.lastVisitTime
                                                 ),
                                             },
-                                            " \u5220\u9664 ",
+                                            " Delete ",
                                             8,
                                             st
                                           ),

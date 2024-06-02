@@ -55,12 +55,12 @@ const x = C({
         s(
           "div",
           { class: "app-name" },
-          "\u8BBE\u7F6E\u641C\u7D22\u5F15\u64CE,\u8BA9\u641C\u7D22\u66F4\u5FEB\u6377"
+          "Set Search Engine,Make Search Faster"
         ),
         s(
           "div",
           { class: "app-msg" },
-          "\u6392\u5E8F\u987A\u5E8F\u4E3A\uFF0C\u6839\u636E\u5F53\u524D\u9009\u62E9\u65F6\u95F4\u6392\u5E8F"
+          "Sorting Order Is，Sort According To The Current Selection Time"
         ),
       ],
       -1
@@ -117,7 +117,7 @@ function W(e, r, a, _, p, h) {
                       effect: "dark",
                       disabled: !(!t.checked && e.isDisabledAdd),
                       content:
-                        "\u6700\u591A\u6DFB\u52A08\u4E2A\u641C\u7D22\u5F15\u64CE,\u8BF7\u5148\u5173\u95ED\u591A\u4F59\u641C\u7D22\u5F15\u64CE",
+                        "Most Add8Search Engine,Please Turn Off The Excess Search Engine First",
                       placement: "top-start",
                     },
                     {

@@ -49,7 +49,7 @@ function i(o, _, f, C, b, w) {
       t,
       {
         destroyOnClose: "",
-        title: "\u7F16\u8F91\u56FE\u6807",
+        title: "Edit Icon",
         width: "886px",
         modelValue: !0,
         onClosed: o.onClose,

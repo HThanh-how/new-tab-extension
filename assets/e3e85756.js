@@ -2144,26 +2144,26 @@ const Dn = Cl(kn, { Option: rl, OptionGroup: Vl }),
   Tn = Fl(rl);
 Fl(Vl);
 const zn = [
-  "\u540E\u7AEF\u5F00\u53D1",
-  "\u524D\u7AEF\u5F00\u53D1",
-  "\u79FB\u52A8\u7AEF\u5F00\u53D1",
-  "\u6D4B\u8BD5",
-  "\u6570\u636E\u5F00\u53D1",
-  "\u4EBA\u5DE5\u667A\u80FD",
-  "\u8FD0\u7EF4/\u6280\u672F\u652F\u6301",
-  "\u9AD8\u7AEF\u6280\u672F\u804C\u4F4D",
-  "\u6280\u672F\u9879\u76EE\u7BA1\u7406",
-  "\u786C\u4EF6",
-  "\u901A\u4FE1",
-  "\u534A\u5BFC\u4F53/\u82AF\u7247",
-  "\u7535\u5B50/\u4EEA\u5668/\u81EA\u52A8\u5316",
-  "\u5176\u5B83\u6280\u672F\u804C\u4F4D",
-  "\u4EA7\u54C1\u7ECF\u7406",
-  "\u4EA7\u54C1",
-  "\u8BBE\u8BA1",
-  "\u6570\u636E\u5206\u6790\u5E08",
-  "\u8FD0\u8425\u7ECF\u7406",
-  "\u5B66\u751F",
+  "Back -End Development",
+  "Front-End Development",
+  "Mobile Development",
+  "Test",
+  "Data Development",
+  "Ai",
+  "Operation And Maintenance/Technical Support",
+  "High -End Technical Position",
+  "Technical Project Management",
+  "Hardware",
+  "Communicate",
+  "Semiconductor/Chip",
+  "Electronic/Instrument/Automation",
+  "Other Technical Positions",
+  "Product Manager",
+  "Product",
+  "Design",
+  "Data Analyst",
+  "Operating Manager",
+  "Student",
 ];
 const $n = {
     name: "AppUser",
@@ -2185,7 +2185,7 @@ const $n = {
             if (l.validateLogin()) return !1;
             const u = _l(c, new Date().getTime().toString() + ".png");
             if (u.size / 1024 > 500)
-              return ke.error("\u6700\u5927\u652F\u6301\u4E0A\u4F20500kb!"), !1;
+              return ke.error("Maximum Support Upload500kb!"), !1;
             r.value = !0;
             const h = await xl.upload({ fileName: u.name, file: u });
             (d.value.avatarUrl = h.data), (r.value = !1);
@@ -2212,9 +2212,9 @@ const $n = {
               homeUrl: O,
             }),
               await e.setUserInfo({ ...d.value }),
-              ke.success("\u66F4\u65B0\u6210\u529F");
+              ke.success("Update Completed");
           } catch {
-            ke.error("\u66F4\u65B0\u5931\u8D25");
+            ke.error("Update Failure");
           } finally {
             r.value = !1;
           }
@@ -2243,25 +2243,25 @@ const $n = {
   re = (e) => (Hl("data-v-070247f6"), (e = e()), jl(), e),
   Mn = { class: "app-bg" },
   qn = { class: "gitem etab-theme" },
-  Pn = re(() => b("p", { class: "glable" }, "\u57FA\u672C\u4FE1\u606F", -1)),
+  Pn = re(() => b("p", { class: "glable" }, "Basic Information", -1)),
   Un = { class: "form-item flex-c" },
-  Wn = re(() => b("span", { class: "form-item_name" }, "\u5934\u50CF", -1)),
+  Wn = re(() => b("span", { class: "form-item_name" }, "Avatar", -1)),
   Nn = { class: "ml-10" },
-  Kn = Bl("\u4E0A\u4F20"),
+  Kn = Bl("Upload"),
   Rn = { class: "form-item flex-c" },
-  Hn = re(() => b("span", { class: "form-item_name" }, "\u540D\u79F0", -1)),
+  Hn = re(() => b("span", { class: "form-item_name" }, "Name", -1)),
   jn = { class: "form-item flex-c" },
-  Qn = re(() => b("span", { class: "form-item_name" }, "\u804C\u4F4D", -1)),
+  Qn = re(() => b("span", { class: "form-item_name" }, "Position", -1)),
   Gn = { class: "form-item flex-c" },
   Jn = re(() =>
-    b("span", { class: "form-item_name" }, "\u535A\u5BA2\u4E3B\u9875", -1)
+    b("span", { class: "form-item_name" }, "Blog Homepage", -1)
   ),
   Yn = { class: "form-item flex-c" },
   Xn = re(() =>
-    b("span", { class: "form-item_name" }, "\u4E2A\u4EBA\u4ECB\u7ECD", -1)
+    b("span", { class: "form-item_name" }, "Self Introduction", -1)
   ),
   Zn = { class: "form-item flex-end" },
-  _n = Bl(" \u4FDD\u5B58 ");
+  _n = Bl(" Save ");
 function xn(e, l, t, r, d, f) {
   const a = q("EtabImg"),
     c = q("EtabUpload"),
@@ -2299,7 +2299,7 @@ function xn(e, l, t, r, d, f) {
               modelValue: r.qfrom.nickName,
               "onUpdate:modelValue":
                 l[0] || (l[0] = (y) => (r.qfrom.nickName = y)),
-              placeholder: "\u8BF7\u8F93\u5165\u540D\u79F0",
+              placeholder: "请输入Name",
               name: "url",
             },
             null,
@@ -2316,7 +2316,7 @@ function xn(e, l, t, r, d, f) {
               modelValue: r.qfrom.industry,
               "onUpdate:modelValue":
                 l[1] || (l[1] = (y) => (r.qfrom.industry = y)),
-              placeholder: "\u8BF7\u8F93\u5165\u4E2A\u4EBA\u804C\u4F4D",
+              placeholder: "请输入个人Position",
               name: "industry",
             },
             {
@@ -2353,7 +2353,7 @@ function xn(e, l, t, r, d, f) {
               "onUpdate:modelValue":
                 l[2] || (l[2] = (y) => (r.qfrom.homeUrl = y)),
               placeholder:
-                "\u8BF7\u8F93\u5165\u4E2A\u4EBA\u535A\u5BA2\u4E3B\u9875",
+                "请输入个人Blog Homepage",
               name: "homeUrl",
             },
             null,
@@ -2370,7 +2370,7 @@ function xn(e, l, t, r, d, f) {
               type: "textarea",
               modelValue: r.qfrom.text,
               "onUpdate:modelValue": l[3] || (l[3] = (y) => (r.qfrom.text = y)),
-              placeholder: "\u8BF7\u8F93\u5165\u4E2A\u4EBA\u4ECB\u7ECD",
+              placeholder: "请输入Self Introduction",
               name: "text",
             },
             null,

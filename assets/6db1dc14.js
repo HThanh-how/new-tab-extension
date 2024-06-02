@@ -73,7 +73,7 @@ const V = E({
   j = { class: "groups" },
   O = ["onClick"],
   J = { class: "flex-end bts" },
-  L = $("\u786E\u8BA4");
+  L = $("Confirm");
 function z(o, p, s, n, c, i) {
   const u = m("EtabBt"),
     r = m("EtabModel");
@@ -84,9 +84,9 @@ function z(o, p, s, n, c, i) {
       {
         destroyOnClose: "",
         title:
-          "\u5C06=>" +
+          "Will=>" +
           o.app.appName +
-          "=>\u79FB\u52A8\u5230\u5206\u7EC4\u{1F447}",
+          "=>Move To Group\u{1F447}",
         width: "320px",
         modelValue: !0,
         onClosed: o.onClose,

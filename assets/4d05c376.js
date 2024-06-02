@@ -46,7 +46,7 @@ const I = A({
   F = ["onClick"],
   N = { class: "search-engine-item_icon" },
   P = { class: "name" },
-  w = o("div", { class: "name" }, "\u7F16\u8F91", -1);
+  w = o("div", { class: "name" }, "Edit", -1);
 function V(n, t, a, d, m, _) {
   const p = c("EtabImg"),
     u = c("Plus"),
