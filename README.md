@@ -1,6 +1,4 @@
-Here's the updated README file with the author's information and a note that the text has been translated by you:
 
----
 
 # eTab - New Tab Extension
 
@@ -75,6 +73,4 @@ eTab is a new tab extension designed specifically for internet developers. It of
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
 
-Feel free to further customize the README based on any additional specific requirements or details unique to your project.
